@@ -1,9 +1,9 @@
 terraform {
 
 /*  cloud {
-    organization = "hashicorp-kf-effectual"
+/*    organization = "hashicorp-kf-effectual"
 
-    workspaces {
+/*    workspaces {
       name = "learn-terraform-cloud"
     }
 /*  }
