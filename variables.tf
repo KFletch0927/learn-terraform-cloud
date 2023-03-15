@@ -1,15 +1,10 @@
-variable "region" {
-  description = "AWS region"
-  default     = "us-west-1"
+# Input Variables
+variable "aws_region" {
+  description = "Region in which AWS Resources to be created"
+  type = string
 }
 
 variable "instance_type" {
-  description = "Type of EC2 instance to provision"
-  default     = "t2.micro"
+  description = "EC2 Instance Type - Instance Sizing"
+  type = string
 }
-
-variable "instance_name" {
-  description = "EC2 instance name"
-  default     = "Provisioned by Terraform"
-}
-
