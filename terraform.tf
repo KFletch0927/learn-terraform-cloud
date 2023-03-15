@@ -1,20 +1,19 @@
+# Terraform Block
 terraform {
-/*
-     cloud {
-      organization = "hashicorp-kf-effectual"
-
-      workspaces {
-      name = "learn-terraform-cloud"
-    }
-    }
-*/
-
+  required_version = "~> 0.14" # which means any version equal & above 0.14 like 0.15, 0.16 etc and < 1.xx
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.28.0"
+      version = "~> 3.0"
     }
   }
-
-  required_version = ">= 0.14.0"
 }
+
+# Provider Block
+provider "aws" {
+  region  = var.aws_region
+}
+/*
+Note-1:  AWS Credentials Profile (profile = "default") configured on your local desktop terminal  
+$HOME/.aws/credentials
+*/
